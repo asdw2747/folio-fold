@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=FolioFold
+GenericName=PDF imposition
+Comment=PDF imposition and signature layout for physical bookbinding
+Exec=folio-fold %f
+Icon=folio-fold
+Terminal=false
+Categories=Graphics;
+MimeType=application/pdf;
+StartupWMClass=folio-fold

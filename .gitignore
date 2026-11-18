@@ -1,0 +1,13 @@
+# Rust build output
+/target
+
+# Generated and test PDFs
+*.pdf
+
+# Packaged release artifacts
+/dist/
+
+# OS / editor / runtime noise
+.DS_Store
+*.log
+Thumbs.db

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101824"/>
+      <stop offset="0.55" stop-color="#0d141f"/>
+      <stop offset="1" stop-color="#080d15"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fbf8ef"/>
+      <stop offset="0.55" stop-color="#f0ecdf"/>
+      <stop offset="1" stop-color="#ddd7c8"/>
+    </linearGradient>
+    <linearGradient id="under" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d2ccbd"/>
+      <stop offset="1" stop-color="#b8b1a2"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6fe8df"/>
+      <stop offset="0.5" stop-color="#3fd0c7"/>
+      <stop offset="1" stop-color="#169c9a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.46" r="0.55">
+      <stop offset="0" stop-color="#3fd0c7" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#3fd0c7" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#3fd0c7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="softglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <clipPath id="paperclip">
+      <path d="M 286 170 H 774 Q 796 170 796 192 V 744 L 712 820 H 286 Q 264 820 264 798 V 192 Q 264 170 286 170 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- App tile -->
+  <rect width="1024" height="1024" rx="218" fill="url(#bg)"/>
+  <rect x="5" y="5" width="1014" height="1014" rx="214" fill="none" stroke="#2b394c" stroke-width="4"/>
+  <rect x="22" y="22" width="980" height="980" rx="198" fill="none" stroke="#172235" stroke-width="2"/>
+
+  <!-- Teal atmosphere behind the paper -->
+  <circle cx="512" cy="512" r="370" fill="url(#glow)"/>
+  <ellipse cx="512" cy="522" rx="272" ry="330" fill="#2bb8b2" opacity="0.18" filter="url(#softglow)"/>
+
+  <!-- Back signatures -->
+  <g filter="url(#shadow)">
+    <rect x="238" y="194" width="540" height="672" rx="18" fill="#9d978b" opacity="0.38"
+          transform="rotate(-7 508 530)"/>
+    <rect x="252" y="182" width="540" height="678" rx="18" fill="url(#under)" opacity="0.72"
+          transform="rotate(-3.4 522 521)"/>
+  </g>
+
+  <!-- Main imposition sheet with a dog-eared corner -->
+  <g filter="url(#shadow)">
+    <path d="M 286 170 H 774 Q 796 170 796 192 V 744 L 712 820 H 286 Q 264 820 264 798 V 192 Q 264 170 286 170 Z"
+          fill="url(#paper)" stroke="#aaa394" stroke-width="3"/>
+    <!-- Subtle page tone left/right of the spine -->
+    <path d="M 264 192 Q 264 170 286 170 H 530 V 820 H 286 Q 264 820 264 798 Z"
+          fill="#ffffff" opacity="0.17"/>
+    <path d="M 530 170 H 774 Q 796 170 796 192 V 744 L 712 820 H 530 Z"
+          fill="#7f7a6e" opacity="0.045"/>
+
+    <!-- Faint page-panel ruling -->
+    <g stroke="#817c70" stroke-width="5" stroke-linecap="round" opacity="0.20">
+      <path d="M 302 246 H 682"/>
+      <path d="M 302 278 H 626"/>
+      <path d="M 302 310 H 654"/>
+      <path d="M 342 602 H 722"/>
+      <path d="M 342 634 H 664"/>
+      <path d="M 342 666 H 700"/>
+    </g>
+
+    <!-- Fold axes -->
+    <path d="M 530 180 V 810" stroke="#117f7d" stroke-width="24" opacity="0.23" filter="url(#softglow)"/>
+    <path d="M 530 180 V 810" stroke="url(#fold)" stroke-width="10"/>
+    <path d="M 274 520 H 786" stroke="#2bbab3" stroke-width="7" stroke-dasharray="26 16" opacity="0.85"/>
+
+    <!-- Folded corner -->
+    <path d="M 712 820 L 712 744 Q 712 736 720 736 L 796 736 Z" fill="#cfc8b7"/>
+    <path d="M 712 820 L 712 744 L 796 736 Z" fill="#ebe5d6"/>
+    <path d="M 712 820 L 712 744 L 796 736" fill="none" stroke="#9c9587" stroke-width="3"/>
+    <path d="M 712 744 L 796 736" stroke="#54d7cf" stroke-width="5" opacity="0.8"/>
+
+    <!-- Spine stitch marks -->
+    <g fill="#1b9f9b" opacity="0.9">
+      <rect x="522" y="242" width="16" height="7" rx="3.5"/>
+      <rect x="522" y="402" width="16" height="7" rx="3.5"/>
+      <rect x="522" y="622" width="16" height="7" rx="3.5"/>
+      <rect x="522" y="782" width="16" height="7" rx="3.5"/>
+    </g>
+  </g>
+
+  <!-- Amber crop / trim marks -->
+  <g stroke="#f3a84b" stroke-width="8" stroke-linecap="square" opacity="0.96">
+    <path d="M 224 146 H 182 V 188"/>
+    <path d="M 836 146 H 878 V 188"/>
+    <path d="M 224 866 H 182 V 824"/>
+    <path d="M 836 866 H 878 V 824"/>
+  </g>
+
+  <!-- Tiny corner registration dots -->
+  <g fill="#f3a84b">
+    <circle cx="182" cy="120" r="4.5" opacity="0.55"/>
+    <circle cx="878" cy="120" r="4.5" opacity="0.55"/>
+    <circle cx="182" cy="893" r="4.5" opacity="0.55"/>
+    <circle cx="878" cy="893" r="4.5" opacity="0.55"/>
+  </g>
+
+  <!-- Highlight on the tile edge -->
+  <path d="M 88 250 Q 88 88 250 88 H 774 Q 920 88 936 212"
+        fill="none" stroke="#8fa3bc" stroke-width="3" opacity="0.16"/>
+</svg>
